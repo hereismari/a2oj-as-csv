@@ -8,13 +8,13 @@ This was tested only on Linux.
 - selenium
 - cssselect
 - csv
-- some internet connection will help haha :smile: (but really, you need it)
+- lxml.html
+- some internet connection will help haha :smile: (but really, you'll need it)
 
-# Ok, but how do i run it?
+# Ok, but how do I run it?
 
 Run it on shell:
 
 `$python runApp.py <ID of the standings> -o <name/path of the output>`
 
-If the name/path of the output isn't explicit the output will be `<ID of the standings>.csv`
-
+If the name/path of the output isn't explicit the output will be `<Standings name>.csv`
