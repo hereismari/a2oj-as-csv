@@ -3,7 +3,7 @@
 
 from utils.webConnection import *
 from utils.HTMLgetter import *
-from utils.saveInCSV import *
+from utils.CSVUtil import *
 import sys
 
 # ------------ GLOBAL CONSTANTS --------------
@@ -16,7 +16,7 @@ MAXIMUM_ARGV_LEN = 4
 MINIMUM_ARGV_LEN = 2
 def howToUse():
     print '$python runApp.py <ID of the standings> -o <name/path of the output>'
-    print 'If  -o parameter is not passed the ouput name will be the name of the standings'
+    print 'If  -o parameter is not passed the output name will be the name of the standings'
 
 # ------------ GETTING INPUT ---------------
 
@@ -30,7 +30,7 @@ elif len(sys.argv) == MAXIMUM_ARGV_LEN:
     output_name = sys.argv[3] 
 elif len(sys.argv) == MINIMUM_ARGV_LEN:
     html += sys.argv[1]
-    output_name = sys.argv[1] + '.csv'
+    output_name = ''
 else:
     howToUse()
     sys.exit(1)
@@ -44,6 +44,8 @@ root = lxml.html.fromstring(html_as_text)
 getter = HTMLgetter(html_as_text)
 
 csv_util = CSVUtil()
+
+if output_name == '': output_name = getter.getStandingsName() + '.csv'
 
 # -------------- GETTING INFORMATION --------------
 
