@@ -39,8 +39,6 @@ else:
 
 con = Connector(html)
 html_as_text = con.read()
-
-root = lxml.html.fromstring(html_as_text)
 getter = HTMLgetter(html_as_text)
 
 csv_util = CSVUtil()
