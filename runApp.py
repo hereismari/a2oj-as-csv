@@ -14,6 +14,7 @@ SOLVED_INDEX = 2
 
 MAXIMUM_ARGV_LEN = 4
 MINIMUM_ARGV_LEN = 2
+
 def howToUse():
     print '$python runApp.py <ID of the standings> -o <name/path of the output>'
     print 'If  -o parameter is not passed the output name will be the name of the standings'
@@ -46,7 +47,6 @@ csv_util = CSVUtil()
 if output_name == '': output_name = getter.getStandingsName() + '.csv'
 
 # -------------- GETTING INFORMATION --------------
-
 usernames = getter.getUsernames()
 problems = getter.getProblems()
 
@@ -83,6 +83,4 @@ for i in xrange(len(users_info)):
 print result
 
 # ------- SAVING IN CSV ---------
-
 csv_util.saveAsCSV(output_name, result)
-

@@ -8,8 +8,7 @@ This was tested only on Linux.
 Some python libs:
 - selenium
 - cssselect
-- csv
-- lxml.html
+- pyvirtualdisplay
 
 And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using mozilla as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/ahmed_aly-as-csv/blob/master/utils/webConnection.py).
 
@@ -21,7 +20,9 @@ Run it on shell:
 
 If the name/path of the output isn't explicit the output will be `<Standings name>.csv`
 
-# How is the output file?
+This will give you a full table almost like ahmed-alt it self.
+
+## How is the output file?
 
 Username | Ranking | Country | Number of Solved Problems| P1 - url | P2 - url | P3 - url | ... | PN - url|
 -------- | --------| --------| -------------------------| ---------| ---------| ---------| ----| --------|

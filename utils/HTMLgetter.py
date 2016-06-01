@@ -7,9 +7,10 @@ class HTMLgetter():
         self.root = lxml.html.fromstring(html)
 
     def getStandingsName(self):
-        for element in self.root.cssselect('b a'):
-            return element.text
-
+        name = self.root.cssselect('b a')[0].text
+        name = name[:len(name)-1] # remove extra char
+        return name
+    
     def getUsernames(self):
         
         users = []
