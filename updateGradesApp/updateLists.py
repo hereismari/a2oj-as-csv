@@ -7,6 +7,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 # ------------ GETTING INPUT ----------
 sheet_number = int(sys.argv[1]) # 0 main sheet, 1 late problems
+sheet_name = sys.argv[2]
 
 # ------------ AUX FUNCTIONS -----------
 
@@ -29,7 +30,7 @@ scope = ['https://spreadsheets.google.com/feeds']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('conf/sheet_conf.json', scope)
 gc = gspread.authorize(credentials)
 
-sh = gc.open("Planilha das notas - automatizada")
+sh = gc.open(sheet_name)
 main_worksheet = sh.get_worksheet(sheet_number)
 print 'Done!'
 

@@ -5,7 +5,8 @@ from CSVUtil import CSVUtil
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
-# ------------ AUX FUNCTIONS -----------
+# ------------ GETTING INPUT -----------
+sheet_name = sys.argv[1]
 
 # ------------ GOOGLE SPREAD SHEETS ------------
 print 'Connecting to Google sheets...'
@@ -13,7 +14,7 @@ scope = ['https://spreadsheets.google.com/feeds']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('conf/sheet_conf.json', scope)
 gc = gspread.authorize(credentials)
 
-sh = gc.open("Planilha das notas - automatizada")
+sh = gc.open(sheet_name)
 main_worksheet = sh.get_worksheet(0)
 late_worksheet = sh.get_worksheet(1)
 print 'Done!'
