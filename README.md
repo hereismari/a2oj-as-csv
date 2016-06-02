@@ -3,6 +3,9 @@
 Python script that takes an [ahmed-aly](http://ahmed-aly.com/) standing and returns a csv with the submissions information.
 This was tested only on Linux.
 
+In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
+Thank you so much [gspread](https://github.com/burnash/gspread) people :smile:
+
 # What will I need in order to run it?
 
 Some python libs:
