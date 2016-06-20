@@ -4,7 +4,7 @@
 These are scripts to automatic update a google sheet containning information about ahmed-aly submissions (in specific students grades).
 An example of the final result right [here](https://docs.google.com/spreadsheets/d/19_QdpZQ1PXhzI83qnb-_lMZhP3nNwHAtk0cnw3rdR6A/edit?usp=sharing).
 
-**Important: to use this script the sheet mush have the same structure as the example and have a second sheet with the same template but different list names (can be seen in the link bellow) **
+*Important: to use this script the sheet mush have the same structure as the example and have a second sheet with the same template but different list names (can be seen in the link bellow)*
 
 SHEET 1
 
@@ -28,11 +28,11 @@ userm         |    userm        |  0        |   0       | ... |     0     |     
 
 ## What do I need in order to run it?
 
-  - Every column that is a contest in ahmed-aly(list) must have the word *lista* in it. And for every list lista1, lista2, ... listan must exist a file csv in the folder *lists* with the same name. 
+  - Every column that is a contest in ahmed-aly(list) must have the word *lista* in it. And for every list lista 1, lista 2, ... lista n, a csv file must exist in the folder *lists* with the same name (lista 1, lista 2, ... ). 
   - install [gspread](https://github.com/burnash/gspread)
   - Obtain OAuth2 credentials from Google Developers Console (as especified in the gspread repository).
     You'll get a conf file and **must** put this file in the conf folder with the name `sheet_conf.json`!!!
-  - Almost done! Now you'll have to give the email of your google developer account the permission to edit the sheet.
+  - Almost done (I know it should be easier, right?) ! Now you'll have to give the email of your google developer account the permission to edit the sheet.
     (Just share with this email the sheet and give it write access)
     
 ## How to run?
