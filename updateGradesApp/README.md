@@ -32,7 +32,7 @@ userm         |    userm        |  0        |   0       | ... |     0     |     
   - install [gspread](https://github.com/burnash/gspread)
   - Obtain OAuth2 credentials from Google Developers Console (as especified in the gspread repository).
     You'll get a conf file and **must** put this file in the conf folder with the name `sheet_conf.json`!!!
-  - Almost done (I know it should be easier, right?) ! Now you'll have to give the email of your google developer account the permission to edit the sheet.
+  - Almost done (I know it should be easier, right? WORKING ON IT!) ! Now you'll have to give the email of your google developer account the permission to edit the sheet.
     (Just share with this email the sheet and give it write access)
     
 ## How to run?
