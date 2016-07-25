@@ -1,5 +1,9 @@
 import sys
+import os.path
+import os
+
 sys.path.append('../utils/')
+
 from CSVUtil import CSVUtil
 
 import gspread
@@ -11,17 +15,27 @@ sheet_name = sys.argv[2]
 
 # ------------ AUX FUNCTIONS -----------
 
-def getSolvedInfo(l):
+def getAhmedAlyID(cell):
+    return  cell.input_value.split("ID=", 1)[1][0:5]
+
+def getSolvedInfo(l, ahmed_aly_id):
 
     result = {}
-
     csv = CSVUtil()
-    matrix_info = csv.openCSV('lists/' + l + '.csv') # file must exist in this folder!!!
+
+    file_name = 'lists/' + l + '.csv'
+
+    if not os.path.isfile(file_name):
+        print "%s does not exist, I'll get this for you!" % file_name
+        os.system('python ../runApp.py %s -o %s' % (ahmed_aly_id, file_name))
+    else:
+        ans = raw_input('File already exists (and probably the column was already setted), want to update column again? (y/n)')
+        if ans == 'n': return (None, False)
+    matrix_info = csv.openCSV(file_name)
     for i in xrange(1, len(matrix_info)):
         result[matrix_info[i][0]] = matrix_info[i][3]
 
-    print result
-    return result
+    return (result, True)
 
 # ------------ GOOGLE SPREAD SHEETS ------------
 
@@ -48,16 +62,18 @@ print 'Users:', users
 
 print 'Getting lists...'
 lists = [e for e in main_worksheet.row_values(1) if 'lista' in e]
-lists = [(lists[i], i + 3) for i in xrange(len(lists))] # + 3 because of the name and user column
+lists = [(lists[i], i + 3, getAhmedAlyID(main_worksheet.cell(1, i+3))) for i in xrange(len(lists))] # + 3 because of the name and user column
+
 print 'Lists:', lists
 
 # ------------ UPDATE LISTS ----------------
 print 'Updating lists in the sheet'
 for l in lists:
-    solved = getSolvedInfo(l[0])
-    for u in users:
-        try:
-            number_of_solved = solved[u[0]]
-        except KeyError:
-            number_of_solved = 0
-        main_worksheet.update_cell(u[1], l[1], number_of_solved)
+    solved, update = getSolvedInfo(l[0], l[2])
+    if update:
+        for u in users:
+            try:
+                number_of_solved = solved[u[0]]
+            except KeyError:
+                number_of_solved = 0
+            main_worksheet.update_cell(u[1], l[1], number_of_solved)
