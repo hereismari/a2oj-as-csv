@@ -12,6 +12,7 @@ Some python libs:
 - selenium
 - cssselect
 - pyvirtualdisplay
+- lxml
 
 And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using mozilla as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/ahmed_aly-as-csv/blob/master/utils/webConnection.py).
 
