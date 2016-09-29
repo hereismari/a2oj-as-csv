@@ -1,7 +1,7 @@
 # ahmed_aly As CSV
 
-Python script that takes an [ahmed-aly](http://ahmed-aly.com/) standing and returns a csv with the submissions information.
-This was tested only on Linux.
+Python script that takes an [a2oj](http://ahmed-aly.com/) standing and returns a csv with the submissions information.
+This was tested and is woking with: Ubuntu 16.4 and Mozilla Firefoz 3.6.
 
 In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
 Thank you so much [gspread](https://github.com/burnash/gspread) people :smile:
