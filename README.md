@@ -1,7 +1,7 @@
 # a2oj As CSV
 
 Python script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
-This was tested and is woking with: Ubuntu 16.4 and Mozilla Firefoz 3.6.
+This was tested and is woking with: Ubuntu 16.4 and Chrome.
 
 In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
 Thank you so much [gspread](https://github.com/burnash/gspread) people :smile:
@@ -14,7 +14,7 @@ Some python libs:
 - pyvirtualdisplay
 - lxml
 
-And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using mozilla as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
+And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using Chrome as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
 
 # Ok, but how do I run it?
 
