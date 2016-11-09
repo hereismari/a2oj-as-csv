@@ -1,6 +1,6 @@
-# ahmed_aly As CSV
+# a2oj As CSV
 
-Python script that takes an [a2oj](http://ahmed-aly.com/) standing and returns a csv with the submissions information.
+Python script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
 This was tested and is woking with: Ubuntu 16.4 and Mozilla Firefoz 3.6.
 
 In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
@@ -14,7 +14,7 @@ Some python libs:
 - pyvirtualdisplay
 - lxml
 
-And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using mozilla as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/ahmed_aly-as-csv/blob/master/utils/webConnection.py).
+And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using mozilla as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
 
 # Ok, but how do I run it?
 
@@ -24,7 +24,7 @@ Run it on shell:
 
 If the name/path of the output isn't explicit the output will be `<Standings name>.csv`
 
-This will give you a full table almost like ahmed-alt it self.
+This will give you a full table almost like a2oj it self.
 
 ## How is the output file?
 
