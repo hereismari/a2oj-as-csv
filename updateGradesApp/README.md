@@ -27,7 +27,7 @@ user3         |    user3        |  4        |   2       | ... |     1     |     
 userm         |    userm        |  0        |   0       | ... |     0     |     0     |                    |         |
 
 ## What do I need in order to run it?
-
+  - sudo apt get install xvfb
   - Every column that is a contest in ahmed-aly(list) must have the word *lista* in it. And for every list lista 1, lista 2, ... lista n, a csv file must exist in the folder *lists* with the same name (lista 1, lista 2, ... ). 
   - install [gspread](https://github.com/burnash/gspread)
   - Obtain OAuth2 credentials from Google Developers Console (as especified in the gspread repository).
@@ -37,7 +37,7 @@ userm         |    userm        |  0        |   0       | ... |     0     |     
     
 ## How to run?
   
-  - execute the `updateAll.sh` and pass the sheet name as a parameter :smile:
+  - execute the `updateGrades.py` and pass the sheet name as a parameter :smile:
     
-    Example: `updateAll.sh grades`
+    Example: `python updateGrades.py grades`
   

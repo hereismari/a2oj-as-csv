@@ -1,7 +1,7 @@
 # a2oj As CSV
 
 Python script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
-This was tested and is woking with: Ubuntu 16.4 and Chrome.
+This was tested and is woking with: Ubuntu 16.4 and selenium with Firefox.
 
 In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
 Thank you so much [gspread](https://github.com/burnash/gspread) people :smile:
@@ -14,7 +14,7 @@ Some python libs:
 - pyvirtualdisplay
 - lxml
 
-And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using Chrome as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
+And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using Firefox as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
 
 # Ok, but how do I run it?
 
@@ -26,7 +26,13 @@ If the name/path of the output isn't explicit the output will be `<Standings nam
 
 This will give you a full table almost like a2oj it self.
 
-## How is the output file?
+## Common problem: WebDriverException: Message: 'geckodriver' executable needs to be in PATH.
+
+You can solve this downloading a stable version of [geckodriver](https://github.com/mozilla/geckodriver/releases), then descompact it and run the following command in terminal:
+
+$ PATH=$PATH:/path/to/directory/of/executable/downloaded/in/previous/step
+
+# How is the output file?
 
 Username | Ranking | Country | Number of Solved Problems| P1 - url | P2 - url | P3 - url | ... | PN - url|
 -------- | --------| --------| -------------------------| ---------| ---------| ---------| ----| --------|

@@ -1,0 +1,35 @@
+1484780739813	geckodriver	INFO	Listening on 127.0.0.1:47597
+1484780740885	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.IpfMqEop6teW
+1484780740886	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484780740909	geckodriver::marionette	INFO	Connecting to Marionette on localhost:37861
+1484780747449	Marionette	INFO	Listening on port 37861
+1484780807656	geckodriver	INFO	Listening on 127.0.0.1:44269
+1484780808652	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.oBZUm0ZCeyBD
+1484780808653	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484780808655	geckodriver::marionette	INFO	Connecting to Marionette on localhost:38989
+1484780812329	Marionette	INFO	Listening on port 38989
+1484780878976	geckodriver	INFO	Listening on 127.0.0.1:53840
+1484780879033	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.yxxbC1fNmYBg
+1484780879034	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484780879036	geckodriver::marionette	INFO	Connecting to Marionette on localhost:44605
+1484780881304	Marionette	INFO	Listening on port 44605
+1484780937694	geckodriver	INFO	Listening on 127.0.0.1:37242
+1484780938693	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.3eLJ6kPNCbUh
+1484780938694	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484780938696	geckodriver::marionette	INFO	Connecting to Marionette on localhost:46577
+1484780939773	Marionette	INFO	Listening on port 46577
+1484781010738	geckodriver	INFO	Listening on 127.0.0.1:35711
+1484781011738	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.cLqeb8aVP8bA
+1484781011740	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484781011743	geckodriver::marionette	INFO	Connecting to Marionette on localhost:45149
+1484781013026	Marionette	INFO	Listening on port 45149
+1484781071327	geckodriver	INFO	Listening on 127.0.0.1:50238
+1484781072328	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.hL61wZB9vhP4
+1484781072329	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484781072332	geckodriver::marionette	INFO	Connecting to Marionette on localhost:41262
+1484781073356	Marionette	INFO	Listening on port 41262
+1484781130017	geckodriver	INFO	Listening on 127.0.0.1:52446
+1484781131018	mozprofile::profile	INFO	Using profile path /tmp/rust_mozprofile.OdS4hWXh8e8g
+1484781131020	geckodriver::marionette	INFO	Starting browser /usr/bin/firefox
+1484781131023	geckodriver::marionette	INFO	Connecting to Marionette on localhost:42596
+1484781132310	Marionette	INFO	Listening on port 42596

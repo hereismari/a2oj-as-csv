@@ -10,13 +10,12 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 # ------------ GETTING INPUT ----------
-sheet_number = int(sys.argv[1]) # 0 main sheet, 1 late problems
-sheet_name = sys.argv[2]
+sheet_name = sys.argv[1]
 
 # ------------ AUX FUNCTIONS -----------
 
 def getAhmedAlyID(cell):
-    return  cell.input_value.split("ID=", 1)[1][0:5]
+    return cell.input_value.split("ID=", 1)[1][0:5]
 
 def getSolvedInfo(l, ahmed_aly_id):
 
@@ -45,7 +44,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('conf/sheet_conf.
 gc = gspread.authorize(credentials)
 
 sh = gc.open(sheet_name)
-main_worksheet = sh.get_worksheet(sheet_number)
+main_worksheet = sh.get_worksheet(0)
 print 'Done!'
 
 # ----------- GETTING USERS ---------------
@@ -62,6 +61,9 @@ print 'Users:', users
 
 print 'Getting lists...'
 lists = [e for e in main_worksheet.row_values(1) if 'lista' in e]
+
+print lists
+
 lists = [(lists[i], i + 3, getAhmedAlyID(main_worksheet.cell(1, i+3))) for i in xrange(len(lists))] # + 3 because of the name and user column
 
 print 'Lists:', lists
