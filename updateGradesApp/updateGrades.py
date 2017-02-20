@@ -12,29 +12,38 @@ from oauth2client.service_account import ServiceAccountCredentials
 # ------------ GETTING INPUT ----------
 sheet_name = sys.argv[1]
 
+# optional parameter in order to not override already existing columns in the table
+if len(sys.argv) >= 3: override = sys.argv[2]
+else: override = None
+
 # ------------ AUX FUNCTIONS -----------
 
 def getAhmedAlyID(cell):
     return cell.input_value.split("ID=", 1)[1][0:5]
 
 def getSolvedInfo(l, ahmed_aly_id):
+    def get_matrix_info(file_name):
+        csv = CSVUtil()
+        result = {}
 
-    result = {}
-    csv = CSVUtil()
+        matrix_info = csv.openCSV(file_name)
+        for i in xrange(1, len(matrix_info)):
+            result[matrix_info[i][0]] = matrix_info[i][3]
+
+        return (result, True)
 
     file_name = 'lists/' + l + '.csv'
 
     if not os.path.isfile(file_name):
         print "%s does not exist, I'll get this for you!" % file_name
         os.system('python ../runApp.py %s -o %s' % (ahmed_aly_id, file_name))
-    else:
-        ans = raw_input('File already exists (and probably the column was already setted), want to update column again? (y/n)')
-        if ans == 'n': return (None, False)
-    matrix_info = csv.openCSV(file_name)
-    for i in xrange(1, len(matrix_info)):
-        result[matrix_info[i][0]] = matrix_info[i][3]
+        return get_matrix_info(file_name)
+    elif override is None:
+        ans = raw_input('File %s already exists (and probably the column was already setted), want to update column again? (y/n)' % file_name)
+        if ans == 'y':
+            return get_matrix_info(file_name)
 
-    return (result, True)
+    return (None, False)
 
 # ------------ GOOGLE SPREAD SHEETS ------------
 
