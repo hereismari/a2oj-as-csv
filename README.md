@@ -13,8 +13,11 @@ Some python libs:
 - cssselect
 - pyvirtualdisplay
 - lxml
+- oauth2client
 
-And some internet connection will help haha :smile: (but really, you'll need it). Algo I'm using Firefox as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
+You can install all of these running: pip install -r requirements.txt
+
+I'm using Firefox as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
 
 # Ok, but how do I run it?
 
