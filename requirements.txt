@@ -1,0 +1,6 @@
+selenium
+cssselect
+pyvirtualdisplay
+lxml
+gspread
+oauth2client
