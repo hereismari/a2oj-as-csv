@@ -1,6 +1,6 @@
 # a2oj As CSV
 
-Python script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
+Python2.7 script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
 This was tested and is woking with: Ubuntu 16.4 and selenium with Firefox.
 
 In this repository there is also an app to automaticly update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
