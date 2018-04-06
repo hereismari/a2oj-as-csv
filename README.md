@@ -3,23 +3,16 @@
 Python script that takes an [a2oj](http://a2oj.com/) standing and returns a csv with the submissions information.
 This was tested and is woking with: Ubuntu 16.4 and selenium with Firefox.
 
-In this repository there is also an app to automatic update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
-Thank you so much [gspread](https://github.com/burnash/gspread) people :smile:
+In this repository there is also an app to automaticly update a sheet at [Google Sheets](https://www.google.com/sheets/about/) based on the `runApp.py` result.
+Thank you so much [gspread](https://github.com/burnash/gspread) :smile:!
 
 # What will I need in order to run it?
 
-Some python libs:
-- selenium
-- cssselect
-- pyvirtualdisplay
-- lxml
-- oauth2client
-
-You can install all of these running: pip install -r requirements.txt
+You can install all the python dependencies running: pip install -r requirements.txt
 
 I'm using Firefox as browser, you can change it if you want, just change the webdriver line in [this file](https://github.com/mari-linhares/a2oj-as-csv/blob/master/utils/webConnection.py).
 
-# Ok, but how do I run it?
+# How do I run it?
 
 Run it on shell:
 
