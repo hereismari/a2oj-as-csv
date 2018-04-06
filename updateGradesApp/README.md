@@ -37,7 +37,7 @@ userm         |    userm        |  0        |   0       | ... |     0     |     
     
 ## How to run?
   
-  - execute the `updateGrades.py` and pass the sheet name as a parameter :smile:
+  - execute the `updateGrades.py` and give the sheet name as a parameter :smile:.
     
     Example: `python updateGrades.py grades`
   
